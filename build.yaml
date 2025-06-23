@@ -1,3 +1,5 @@
+# Configuración exacta según repositorio funcional
+---
 include:
   - board: seeeduino_xiao_ble
     shield: totem_dongle prospector_adapter
@@ -5,6 +7,3 @@ include:
     shield: totem_left
   - board: seeeduino_xiao_ble
     shield: totem_right
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
-# there is no settingsreset (needed) for the XIAO

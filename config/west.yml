@@ -1,3 +1,4 @@
+# Configuración exacta para módulo Prospector según eigatech
 manifest:
   remotes:
     - name: zmkfirmware
