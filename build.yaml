@@ -1,8 +1,17 @@
 include:
+  # Para uso con Bluetooth directo (sin dongle)
   - board: xiao_ble
     shield: totem_left
   - board: xiao_ble
     shield: totem_right
+  # Para uso con dongle (left como periférico)
+  - board: xiao_ble
+    shield: totem_left
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: totem_left_peripheral
+  - board: xiao_ble
+    shield: totem_right
+    artifact-name: totem_right_peripheral
   - board: xiao_ble
     shield: totem_dongle prospector_adapter
   - board: xiao_ble
