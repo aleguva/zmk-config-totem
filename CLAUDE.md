@@ -5,11 +5,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Objetivo del Proyecto
 
 Migración gradual al layout Miryoku siguiendo estos pasos:
-1. Verificar funcionamiento Bluetooth
-2. Verificar funcionamiento con dongle Prospector
-3. Migración paso a paso a Miryoku
+1. ✅ Verificar funcionamiento Bluetooth - FUNCIONA
+2. ✅ Verificar funcionamiento con dongle Prospector - FUNCIONA
+3. ⏳ Migración paso a paso a Miryoku
 
 **Filosofía**: Cambios pequeños y commits regulares. NO hacer cambios grandes que puedan causar arrepentimientos.
+
+## Estado Actual
+
+- Bluetooth directo: ✅ Funcional
+- Dongle Prospector: ✅ Funcional
+- Problema conocido: Right muestra 0% batería en dongle (pendiente verificar tras carga)
 
 ## Build System
 
