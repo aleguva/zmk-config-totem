@@ -130,11 +130,11 @@ label= "MOUSE"                             ;
   //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
   //             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃           ┃  BRI_DN   ┃  BRI_UP   ┃           ┃
   //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-  //             ┃    GUI    ┃    ALT    ┃   CTRL    ┃   SHIFT   ┃           ┃   ┃           ┃ PREV      ┃VOLUME_DOWN┃VOLUME_UP  ┃    NEXT   ┃
+  //             ┃    GUI    ┃    ALT    ┃   CTRL    ┃   SHIFT   ┃           ┃   ┃           ┃   PREV    ┃  VOL_DN   ┃  VOL_UP   ┃   NEXT    ┃
   // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-  // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  BT 0     ┃   BT 1    ┃  BT 2     ┃   BT 3    ┃           ┃
+  // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃  OUT_TOG  ┃   BT 0    ┃   BT 1    ┃   BT 2    ┃   BT 3    ┃           ┃
   // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-  //                                     ┃           ┃           ┃           ┃   ┃   STOP    ┃PAUSE_BREAK┃   MUTE    ┃
+  //                                     ┃           ┃           ┃           ┃   ┃  STOP     ┃   PAUSE   ┃   MUTE    ┃
   //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
  bindings = <
@@ -142,8 +142,8 @@ label= "MOUSE"                             ;
 
                 &trans      &trans      &trans      &trans      &trans          &trans      &trans      &kp C_BRI_DN &kp C_BRI_UP &trans
                 &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &trans          &trans      &kp C_PREV  &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
-    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans
-                                        &trans      &trans      &trans          &kp C_STOP  &kp C_PP    &kp C_MUTE
+    &trans      &trans      &trans      &trans      &trans      &trans          &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans
+                                        &trans      &trans      &trans          &kp C_STOP   &kp C_PP    &kp C_MUTE
                         >;
                 };
 
@@ -160,7 +160,7 @@ label= "SYM"                               ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃     ~     ┃     !     ┃     @     ┃     #     ┃     |     ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃     (     ┃     )     ┃     _     ┃   ┃   ENTER   ┃   BSPC    ┃    DEL    ┃
+//                                     ┃     (     ┃     )     ┃     _     ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -168,7 +168,7 @@ label= "SYM"                               ;
                 &kp LBRC    &kp AMPS    &kp STAR    &kp LPAR    &kp RBRC        &trans      &trans      &trans      &trans      &trans
                 &kp COLON   &kp DLLR    &kp PRCNT   &kp CARET   &kp PLUS        &trans      &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
     &trans      &kp TILDE   &kp EXCL    &kp AT      &kp HASH    &kp PIPE        &trans      &trans      &trans      &trans      &trans      &trans
-                                        &kp LPAR    &kp RPAR    &kp UNDER       &kp RET     &kp BSPC    &kp DEL
+                                        &kp LPAR    &kp RPAR    &kp UNDER       &trans      &trans      &trans
                         >;
                 };
 
