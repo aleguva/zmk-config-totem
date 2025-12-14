@@ -64,7 +64,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SQT
                 &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
     &trans      &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &trans
-                                        &lt MEDIA ESC &lt MOUSE TAB &lt NAV SPACE    &lt SYM BSPC &lt NUM RET &lt FUN DEL
+                                        &lt MEDIA ESC &lt MOUSE SPACE &lt NAV TAB   &lt SYM RET &lt NUM BSPC &lt FUN DEL
                         >;
                 };
 
@@ -76,20 +76,20 @@ label= "BASE"                              ;
 label= "NAV"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   PG UP   ┃   HOME    ┃     UP    ┃    END    ┃    INS    ┃
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃   REDO    ┃   PASTE   ┃   COPY    ┃    CUT    ┃   UNDO    ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃    GUI    ┃    ALT    ┃   CTRL    ┃   SHIFT   ┃           ┃   ┃   PG DN   ┃   LEFT    ┃   DOWN    ┃   RIGHT   ┃    DEL    ┃
+//             ┃    GUI    ┃    ALT    ┃   CTRL    ┃   SHIFT   ┃           ┃   ┃ CAPS LOCK ┃   LEFT    ┃   DOWN    ┃     UP    ┃   RIGHT   ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃   BSPC    ┃           ┃           ┃           ┃           ┃
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃    INS    ┃   HOME    ┃  PG DN    ┃   PG UP   ┃    END    ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃   SPACE   ┃           ┃   ┃   ENTER   ┃   BSPC    ┃    DEL    ┃
+//                                     ┃           ┃           ┃           ┃   ┃   ENTER   ┃   BSPC    ┃    DEL    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp INS
-                &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &trans          &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL
-    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &kp BSPC    &trans      &trans      &trans      &trans
+                &trans      &trans      &trans      &trans      &trans          &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO
+                &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &trans          &kp CAPS    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
+    &trans      &trans      &trans      &trans      &trans      &trans          &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &trans
                                         &trans      &trans      &trans          &kp RET     &kp BSPC    &kp DEL
                         >;
                 };
