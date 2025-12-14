@@ -17,13 +17,14 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define BASE  0
-#define NAV   1
-#define MOUSE 2
-#define MEDIA 3
-#define SYM   4
-#define NUM   5
-#define FUN   6
+#define BASE   0
+#define NAV    1
+#define MOUSE  2
+#define MEDIA  3
+#define SYM    4
+#define NUM    5
+#define FUN    6
+#define BUTTON 7
 
 &mt {
   quick-tap-ms = <100>;
@@ -64,7 +65,7 @@ label= "BASE"                              ;
 
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SQT
                 &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
-    &trans      &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &trans
+    &mo BUTTON  &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &mo BUTTON
                                         &lt MEDIA ESC &lt MOUSE SPACE &lt NAV TAB   &lt SYM RET &lt NUM BSPC &lt FUN DEL
                         >;
                 };
@@ -108,7 +109,7 @@ label= "MOUSE"                             ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃ SCRL LEFT ┃ SCRL DOWN ┃  SCRL UP  ┃SCRL RIGHT ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃           ┃   ┃ M BTN 1   ┃ M BTN 3   ┃ M BTN 2   ┃
+//                                     ┃           ┃           ┃           ┃   ┃ M BTN 2   ┃ M BTN 1   ┃ M BTN 3   ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -116,7 +117,7 @@ label= "MOUSE"                             ;
                 &trans      &trans      &trans      &trans      &trans          &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO
                 &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &trans          &trans      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
     &trans      &trans      &trans      &trans      &trans      &trans          &trans      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &trans
-                                        &trans      &trans      &trans          &mkp LCLK   &mkp MCLK   &mkp RCLK
+                                        &trans      &trans      &trans          &mkp RCLK   &mkp LCLK   &mkp MCLK
                         >;
                 };
 
@@ -209,6 +210,31 @@ label= "FUN"                               ;
                 &kp F11     &kp F4      &kp F5      &kp F6      &kp SLCK        &trans      &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
     &trans      &kp F10     &kp F1      &kp F2      &kp F3      &kp PAUSE_BREAK &trans      &bt BT_CLR  &bt BT_NXT  &bt BT_PRV &out OUT_TOG &bootloader
                                         &kp ESC     &kp SPACE   &kp TAB         &kp RET     &kp BSPC    &kp DEL
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                button_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "BUTTON"                            ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃    UNDO   ┃    CUT    ┃   COPY    ┃  PASTE    ┃   REDO    ┃   ┃   REDO    ┃   PASTE   ┃   COPY    ┃    CUT    ┃   UNDO    ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃    GUI    ┃    ALT    ┃   CTRL    ┃   SHIFT   ┃           ┃   ┃           ┃  SHIFT    ┃   CTRL    ┃   ALT     ┃   GUI     ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃    UNDO   ┃    CUT    ┃   COPY    ┃  PASTE    ┃   REDO    ┃   ┃   REDO    ┃   PASTE   ┃   COPY    ┃    CUT    ┃   UNDO    ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃  M BTN 3  ┃ M BTN 1   ┃ M BTN 2   ┃   ┃ M BTN 2   ┃ M BTN 1   ┃ M BTN 3   ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &kp K_UNDO  &kp K_CUT   &kp K_COPY  &kp K_PASTE &kp K_REDO      &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO
+                &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &trans          &trans      &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
+    &trans      &kp K_UNDO  &kp K_CUT   &kp K_COPY  &kp K_PASTE &kp K_REDO      &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  &trans
+                                        &mkp MCLK   &mkp LCLK   &mkp RCLK       &mkp RCLK   &mkp LCLK   &mkp MCLK
                         >;
                 };
         };
