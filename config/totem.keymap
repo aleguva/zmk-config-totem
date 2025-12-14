@@ -89,7 +89,7 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO
+                &trans      &trans      &trans      &trans      &trans          &kp LG(LS(Z))  &kp LG(V) &kp LG(C)  &kp LG(X)   &kp LG(Z)
                 &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &trans          &kp CAPS    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
     &trans      &trans      &trans      &trans      &trans      &trans          &kp INS     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &trans
                                         &trans      &trans      &trans          &kp RET     &kp BSPC    &kp DEL
@@ -114,7 +114,7 @@ label= "MOUSE"                             ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &trans      &trans      &trans      &trans      &trans          &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO
+                &trans      &trans      &trans      &trans      &trans          &kp LG(LS(Z))  &kp LG(V) &kp LG(C)  &kp LG(X)   &kp LG(Z)
                 &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &trans          &trans      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
     &trans      &trans      &trans      &trans      &trans      &trans          &trans      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &trans
                                         &trans      &trans      &trans          &mkp RCLK   &mkp LCLK   &mkp MCLK
@@ -205,21 +205,21 @@ label= "NUM"                               ;
 label= "FUN"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃    F12    ┃    F7     ┃    F8     ┃    F9     ┃  PRTSCR   ┃   ┃           ┃           ┃           ┃           ┃   RESET   ┃
+//             ┃    F12    ┃    F7     ┃    F8     ┃    F9     ┃  PRTSCR   ┃   ┃           ┃           ┃           ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃    F11    ┃    F4     ┃    F5     ┃    F6     ┃ SCRLLOCK  ┃   ┃           ┃   SHIFT   ┃   CTRL    ┃    ALT    ┃    GUI    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃    F10    ┃    F1     ┃    F2     ┃    F3     ┃   PAUSE   ┃   ┃           ┃ BT CLEAR  ┃ BT NEXT   ┃ BT PREV   ┃ OUT TOG   ┃ BOOTLOAD  ┃
+// ┃           ┃    F10    ┃    F1     ┃    F2     ┃    F3     ┃   PAUSE   ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃   ESC     ┃   SPACE   ┃    TAB    ┃   ┃   ENTER   ┃   BSPC    ┃    DEL    ┃
+//                                     ┃   ESC     ┃   SPACE   ┃    TAB    ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp F12     &kp F7      &kp F8      &kp F9      &kp PSCRN       &trans      &trans      &trans      &trans      &sys_reset
+                &kp F12     &kp F7      &kp F8      &kp F9      &kp PSCRN       &trans      &trans      &trans      &trans      &trans
                 &kp F11     &kp F4      &kp F5      &kp F6      &kp SLCK        &trans      &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-    &trans      &kp F10     &kp F1      &kp F2      &kp F3      &kp PAUSE_BREAK &trans      &bt BT_CLR  &bt BT_NXT  &bt BT_PRV &out OUT_TOG &bootloader
-                                        &kp ESC     &kp SPACE   &kp TAB         &kp RET     &kp BSPC    &kp DEL
+    &trans      &kp F10     &kp F1      &kp F2      &kp F3      &kp PAUSE_BREAK &trans      &trans      &trans      &trans      &trans      &trans
+                                        &kp ESC     &kp SPACE   &kp TAB         &trans      &trans      &trans
                         >;
                 };
 
@@ -236,14 +236,14 @@ label= "BUTTON"                            ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃    UNDO   ┃    CUT    ┃   COPY    ┃  PASTE    ┃   REDO    ┃   ┃   REDO    ┃   PASTE   ┃   COPY    ┃    CUT    ┃   UNDO    ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃  M BTN 3  ┃ M BTN 1   ┃ M BTN 2   ┃   ┃ M BTN 2   ┃ M BTN 1   ┃ M BTN 3   ┃
+//                                     ┃  MIDDLE   ┃ LEFT      ┃ RIGHT     ┃   ┃   RIGHT   ┃   LEFT    ┃   MIDDLE  ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp K_UNDO  &kp K_CUT   &kp K_COPY  &kp K_PASTE &kp K_REDO      &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO
+                &kp LG(Z)  &kp LG(X)   &kp LG(C)  &kp LG(V) &kp LG(LS(Z))      &kp LG(LS(Z))  &kp LG(V) &kp LG(C)  &kp LG(X)   &kp LG(Z)
                 &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &trans          &trans      &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-    &trans      &kp K_UNDO  &kp K_CUT   &kp K_COPY  &kp K_PASTE &kp K_REDO      &kp K_REDO  &kp K_PASTE &kp K_COPY  &kp K_CUT   &kp K_UNDO  &trans
+    &trans      &kp LG(Z)  &kp LG(X)   &kp LG(C)  &kp LG(V) &kp LG(LS(Z))      &kp LG(LS(Z))  &kp LG(V) &kp LG(C)  &kp LG(X)   &kp LG(Z)  &trans
                                         &mkp MCLK   &mkp LCLK   &mkp RCLK       &mkp RCLK   &mkp LCLK   &mkp MCLK
                         >;
                 };
