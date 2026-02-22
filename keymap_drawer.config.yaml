@@ -1,3 +1,6 @@
+draw_config:
+  n_columns: 2
+
 parse_config:
   trans_legend: ""
   zmk_keycode_map:
